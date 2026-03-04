@@ -1,5 +1,5 @@
 {
-  "name": "deno-ogp",
+  "name": "satoru-deno-ogp-image",
   "version": "1.0.0",
   "private": true,
   "type": "module",
@@ -16,5 +16,9 @@
   },
   "devDependencies": {
     "@types/react": "^19.2.14"
-  }
+  },
+  "main": "index.js",
+  "repository": "https://github.com/SoraKumo001/satoru-deno-ogp-image",
+  "author": "SoraKumo <info@croud.jp>",
+  "license": "MIT"
 }
