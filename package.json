@@ -1,0 +1,20 @@
+{
+  "name": "deno-ogp",
+  "version": "1.0.0",
+  "private": true,
+  "type": "module",
+  "scripts": {
+    "dev": "deno task dev",
+    "update": "deno cache --reload src/main.tsx",
+    "deploy": "npx next-exec -- deployctl deploy --project satoru-deno-ogp --prod"
+  },
+  "dependencies": {
+    "hono": "^4.12.1",
+    "react": "^19.2.4",
+    "react-dom": "^19.2.4",
+    "satoru-render": "^0.0.9"
+  },
+  "devDependencies": {
+    "@types/react": "^19.2.14"
+  }
+}
