@@ -2,18 +2,18 @@
   "tasks": {
     "dev": "deno run --allow-net --allow-read --allow-env --watch src/main.tsx"
   },
-  "imports": {
-    "hono": "npm:hono",
-    "react": "npm:react",
-    "react-dom": "npm:react-dom",
-    "preact": "npm:preact",
-    "preact-render-to-string": "npm:preact-render-to-string",
-    "satoru-render": "npm:satoru-render"
-  },
   "compilerOptions": {
     "jsx": "react-jsx",
     "jsxImportSource": "preact"
   },
   "entrypoint": "src/main.tsx",
-  "nodeModulesDir": "auto"
+  "nodeModulesDir": "auto",
+  "deploy": {
+    "project": "16efe728-4891-4db2-a4ed-c104291bedad",
+    "exclude": [
+      "**/node_modules"
+    ],
+    "include": [],
+    "entrypoint": "src\\main.tsx"
+  }
 }

@@ -14,7 +14,7 @@ Deno.serve(async (request) => {
 
   const isDev =
     Deno.env.get("DENO_ENV") === "development" || url.hostname === "localhost";
-  const cache = await caches.open("satoru-ogp");
+  const cache = await caches.open("satoru-ogp2");
   const cacheKey = new Request(url.toString());
 
   if (!isDev) {
