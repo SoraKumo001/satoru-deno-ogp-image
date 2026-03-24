@@ -1,5 +1,6 @@
-import { toHtml } from "satoru-render/react";
+import { toHtml } from "satoru-render/preact";
 import { render } from "satoru-render";
+import { createCSS } from "satoru-render/tailwind";
 
 Deno.serve(async (request) => {
   const url = new URL(request.url);
@@ -117,6 +118,7 @@ Deno.serve(async (request) => {
   // Render to PNG with automatic font resolution
   const png = await render({
     value: html,
+    css: await createCSS(html),
     width: 1200,
     height: 630,
     format: "png",

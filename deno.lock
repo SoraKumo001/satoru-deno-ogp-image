@@ -2,27 +2,73 @@
   "version": "5",
   "specifiers": {
     "npm:@types/react@^19.2.14": "19.2.14",
-    "npm:hono@*": "4.12.1",
-    "npm:hono@^4.12.1": "4.12.1",
+    "npm:@unocss/core@66.6.7": "66.6.7",
+    "npm:@unocss/preset-wind4@66.6.7": "66.6.7",
+    "npm:hono@*": "4.12.9",
+    "npm:hono@^4.12.9": "4.12.9",
+    "npm:preact-render-to-string@*": "6.6.6_preact@10.28.4",
+    "npm:preact-render-to-string@6.6.6": "6.6.6_preact@10.28.4",
+    "npm:preact@*": "10.28.4",
+    "npm:preact@10.28.4": "10.28.4",
     "npm:react-dom@*": "19.2.4_react@19.2.4",
-    "npm:react-dom@^19.2.4": "19.2.4_react@19.2.4",
     "npm:react@*": "19.2.4",
-    "npm:react@^19.2.4": "19.2.4",
-    "npm:satoru-render@*": "0.0.9_react@19.2.4_react-dom@19.2.4__react@19.2.4",
-    "npm:satoru-render@^0.0.9": "0.0.9_react@19.2.4_react-dom@19.2.4__react@19.2.4"
+    "npm:satoru-render@*": "0.0.24_@unocss+core@66.6.7_@unocss+preset-wind4@66.6.7_preact@10.28.4_preact-render-to-string@6.6.6__preact@10.28.4_react@19.2.4_react-dom@19.2.4__react@19.2.4",
+    "npm:satoru-render@^0.0.24": "0.0.24_@unocss+core@66.6.7_@unocss+preset-wind4@66.6.7_preact@10.28.4_preact-render-to-string@6.6.6__preact@10.28.4_react@19.2.4_react-dom@19.2.4__react@19.2.4"
   },
   "npm": {
+    "@jridgewell/sourcemap-codec@1.5.5": {
+      "integrity": "sha512-cYQ9310grqxueWbl+WuIUIaiUaDcj7WOq5fVhEljNVgRfOUhY9fy2zTvfoqWsnebh8Sl70VScFbICvJnLKB0Og=="
+    },
     "@types/react@19.2.14": {
       "integrity": "sha512-ilcTH/UniCkMdtexkoCN0bI7pMcJDvmQFPvuPvmEaYA/NSfFTAgdUSLAoVjaRJm7+6PvcM+q1zYOwS4wTYMF9w==",
       "dependencies": [
         "csstype"
       ]
     },
+    "@unocss/core@66.6.7": {
+      "integrity": "sha512-Q8456iWFtdwrUNYKVOQY8ygRggjZOVtLc6Jc8KIkxig7OiNlUWOgXJTfCh4I8g6jBYzC5eHaHFDLgJOmOrxBsg=="
+    },
+    "@unocss/extractor-arbitrary-variants@66.6.7": {
+      "integrity": "sha512-PQiBHK0yUJ0BR+3GYnTPU6va6HVSRPV+O+s1zZmt23TWbyIeucoKCNR47TDtv+Z1xuksY8krIjtDYtufdrVWKw==",
+      "dependencies": [
+        "@unocss/core"
+      ]
+    },
+    "@unocss/preset-wind4@66.6.7": {
+      "integrity": "sha512-9grhWeBsFzpv8iER9AFATRaxLyXMCwGQ5HzeI4XZh2ZZ9O6vC7nYfGhns4/I+F/RpFglzU1bjqMWRS/DS8OpGQ==",
+      "dependencies": [
+        "@unocss/core",
+        "@unocss/extractor-arbitrary-variants",
+        "@unocss/rule-utils"
+      ]
+    },
+    "@unocss/rule-utils@66.6.7": {
+      "integrity": "sha512-4PT/s8yKIShSqP9XPSw4EjbZopcu3wlIB9i3kbGbzQwF91H+0Yy10guK3kHDGtkmWVN6Np6VvaGIj2UcbmaivA==",
+      "dependencies": [
+        "@unocss/core",
+        "magic-string"
+      ]
+    },
     "csstype@3.2.3": {
       "integrity": "sha512-z1HGKcYy2xA8AGQfwrn0PAy+PB7X/GSj3UVJW9qKyn43xWa+gl5nXmU4qqLMRzWVLFC8KusUX8T/0kCiOYpAIQ=="
     },
-    "hono@4.12.1": {
-      "integrity": "sha512-hi9afu8g0lfJVLolxElAZGANCTTl6bewIdsRNhaywfP9K8BPf++F2z6OLrYGIinUwpRKzbZHMhPwvc0ZEpAwGw=="
+    "hono@4.12.9": {
+      "integrity": "sha512-wy3T8Zm2bsEvxKZM5w21VdHDDcwVS1yUFFY6i8UobSsKfFceT7TOwhbhfKsDyx7tYQlmRM5FLpIuYvNFyjctiA=="
+    },
+    "magic-string@0.30.21": {
+      "integrity": "sha512-vd2F4YUyEXKGcLHoq+TEyCjxueSeHnFxyyjNp80yg0XV4vUhnDer/lvvlqM/arB5bXQN5K2/3oinyCRyx8T2CQ==",
+      "dependencies": [
+        "@jridgewell/sourcemap-codec"
+      ]
+    },
+    "preact-render-to-string@6.6.6_preact@10.28.4": {
+      "integrity": "sha512-EfqZJytnjJldV+YaaqhthU2oXsEf5e+6rDv957p+zxAvNfFLQOPfvBOTncscQ+akzu6Wrl7s3Pa0LjUQmWJsGQ==",
+      "dependencies": [
+        "preact"
+      ]
+    },
+    "preact@10.28.4": {
+      "integrity": "sha512-uKFfOHWuSNpRFVTnljsCluEFq57OKT+0QdOiQo8XWnQ/pSvg7OpX5eNOejELXJMWy+BwM2nobz0FkvzmnpCNsQ=="
     },
     "react-dom@19.2.4_react@19.2.4": {
       "integrity": "sha512-AXJdLo8kgMbimY95O2aKQqsz2iWi9jMgKJhRBAxECE4IFxfcazB2LmzloIoibJI3C12IlY20+KFaLv+71bUJeQ==",
@@ -34,14 +80,22 @@
     "react@19.2.4": {
       "integrity": "sha512-9nfp2hYpCwOjAN+8TZFGhtWEwgvWHXqESH8qT89AT/lWklpLON22Lc8pEtnpsZz7VmawabSU0gCjnj8aC0euHQ=="
     },
-    "satoru-render@0.0.9_react@19.2.4_react-dom@19.2.4__react@19.2.4": {
-      "integrity": "sha512-FkuGUKm/1P2yA1mgELbMIt5/XOdQeEgQQbWwkXOLcGqbPZwJiwHN3EXOxfX/bhcHNMg8Pa9xDmlLogDeG5yBTA==",
+    "satoru-render@0.0.24_@unocss+core@66.6.7_@unocss+preset-wind4@66.6.7_preact@10.28.4_preact-render-to-string@6.6.6__preact@10.28.4_react@19.2.4_react-dom@19.2.4__react@19.2.4": {
+      "integrity": "sha512-BrSjkCFra000HdcahgKDsg5DkFkc6ZjfhTxv0gXs5gb133QOxgeLuyBMZ/60q2h8mgtXlgdaOiawcj0IybUp6A==",
       "dependencies": [
+        "@unocss/core",
+        "@unocss/preset-wind4",
+        "preact",
+        "preact-render-to-string",
         "react",
         "react-dom",
         "worker-lib"
       ],
       "optionalPeers": [
+        "@unocss/core",
+        "@unocss/preset-wind4",
+        "preact",
+        "preact-render-to-string",
         "react",
         "react-dom"
       ],
@@ -57,6 +111,8 @@
   "workspace": {
     "dependencies": [
       "npm:hono@*",
+      "npm:preact-render-to-string@*",
+      "npm:preact@*",
       "npm:react-dom@*",
       "npm:react@*",
       "npm:satoru-render@*"
@@ -64,10 +120,12 @@
     "packageJson": {
       "dependencies": [
         "npm:@types/react@^19.2.14",
-        "npm:hono@^4.12.1",
-        "npm:react-dom@^19.2.4",
-        "npm:react@^19.2.4",
-        "npm:satoru-render@^0.0.9"
+        "npm:@unocss/core@66.6.7",
+        "npm:@unocss/preset-wind4@66.6.7",
+        "npm:hono@^4.12.9",
+        "npm:preact-render-to-string@6.6.6",
+        "npm:preact@10.28.4",
+        "npm:satoru-render@^0.0.24"
       ]
     }
   }
