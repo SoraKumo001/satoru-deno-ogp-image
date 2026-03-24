@@ -23,94 +23,65 @@ Deno.serve(async (request) => {
   }
 
   const html = toHtml(
-    <html>
-      <head>
-        <link
-          href="https://fonts.googleapis.com/css2?family=Noto+Sans+JP:wght@100..900&display=swap"
-          rel="stylesheet"
-        />
-      </head>
-      <body
-        style={{
-          margin: 16,
-          borderRadius: 16,
-          boxSizing: "border-box",
-          overflow: "hidden",
-        }}
-      >
-        <div
-          style={{
-            border: "solid 16px",
-            borderImage:
-              "linear-gradient(to right, #6666aa 0%, #333366 20%, #222233 100%) 2",
-            boxSizing: "border-box",
-            width: "100%",
-            height: "100%",
-            position: "relative",
-            display: "flex",
-            flexDirection: "column",
-            alignItems: "center",
-            backgroundImage:
-              "linear-gradient(to bottom right, #333355, #666688)",
-            backgroundSize: "16px 16px, 100% 100%",
-            color: "white",
-            overflow: "hidden",
-          }}
-        >
-          {image && (
-            <img
-              style={{
-                borderRadius: "100%",
-                padding: "24px",
-                opacity: 0.7,
-                position: "absolute",
-              }}
-              width={480}
-              height={480}
-              src={image}
-              alt=""
-            />
-          )}
-          <div>
-            <div
-              style={{
-                fontSize: "80px",
-                fontWeight: "bold",
-                textShadow: "0 8px 16px rgba(0,0,0,0.6)",
-                filter: "drop-shadow(0 4px 8px rgba(0,0,0,0.8))",
-                backdropFilter: "blur(5px)",
-                zIndex: 1,
-                display: "-webkit-box",
-                WebkitBoxOrient: "vertical",
-                lineClamp: 3,
-                overflow: "hidden",
-                margin: 32,
-                borderRadius: 32,
-                padding: 16,
-              }}
-            >
-              {title}
+    <html className="bg-[#050505]">
+      <body className="w-full h-full flex items-center justify-center p-0 m-0 bg-[#050505]">
+        <div className="w-[1200px] h-[630px] flex relative bg-[#0a0a1a] text-white overflow-hidden font-['Noto_Sans_JP']">
+          {/* Background Orbs */}
+          <div className="absolute -top-[150px] -left-[150px] w-[500px] h-[500px] rounded-full bg-blue-600/30 blur-[120px]" />
+          <div className="absolute -bottom-[150px] -right-[150px] w-[600px] h-[600px] rounded-full bg-purple-600/30 blur-[150px]" />
+          <div className="absolute top-[100px] right-[100px] w-[300px] h-[300px] rounded-full bg-pink-600/20 blur-[100px]" />
+          <div className="absolute top-[20%] left-[20%] w-[400px] h-[400px] rounded-full bg-blue-500/10 blur-[150px] opacity-40" />
+
+          {/* Grid Overlay */}
+          <div
+            className="absolute inset-0 opacity-10"
+            style={{
+              backgroundImage:
+                "radial-gradient(circle, #ffffff 1px, transparent 1px)",
+              backgroundSize: "40px 40px",
+            }}
+          />
+
+          {/* Main Content Container */}
+          <div className="flex flex-col justify-center w-full h-full p-24 z-10">
+            <div className="flex items-center gap-16">
+              {/* Image / Logo Section */}
+              {image && (
+                <div className="shrink-0">
+                  <div className="relative group">
+                    <div className="absolute inset-0 bg-blue-500/30 blur-3xl rounded-full scale-110 opacity-50" />
+                    <img
+                      className="relative rounded-[48px] border-2 border-white/20 shadow-[0_20px_50px_rgba(0,0,0,0.8)] drop-shadow-[0_0_15px_rgba(255,255,255,0.1)]"
+                      width={280}
+                      height={280}
+                      src={image}
+                      alt=""
+                    />
+                  </div>
+                </div>
+              )}
+
+              {/* Text Content Section */}
+              <div className="flex flex-col gap-10 flex-1">
+                <div className="flex flex-col gap-6">
+                  <h1 className="text-[64px] font-black leading-[1.1] drop-shadow-[0_12px_12px_rgba(0,0,0,0.8)] line-clamp-4 overflow-hidden">
+                    {title}
+                  </h1>
+                </div>
+
+                {/* Footer Section - Integrated */}
+                <div className="flex items-center gap-4 w-fit px-8 py-4 rounded-3xl bg-white/5 border border-white/10 backdrop-blur-2xl shadow-[0_10px_30px_rgba(0,0,0,0.5)]">
+                  <div className="w-4 h-4 rounded-full bg-green-400 shadow-[0_0_15px_rgba(74,222,128,0.8)] animate-pulse" />
+                  <span className="text-3xl font-black tracking-widest text-white/95 uppercase drop-shadow-[0_4px_8px_rgba(0,0,0,0.6)]">
+                    {name}
+                  </span>
+                </div>
+              </div>
             </div>
           </div>
 
-          <div
-            style={{
-              position: "absolute",
-              bottom: "40px",
-              right: "40px",
-              fontSize: "24px",
-              fontWeight: "bold",
-              padding: "12px 24px",
-              border: "1px solid rgba(255,255,255,0.2)",
-              filter: "drop-shadow(0 4px 8px rgba(0,0,0,0.8))",
-              borderRadius: "12px",
-              backdropFilter: "blur(4px)",
-              color: "#EE6688",
-              zIndex: 1,
-            }}
-          >
-            {name}
-          </div>
+          {/* Decorative Border */}
+          <div className="absolute inset-4 border border-white/10 rounded-4xl pointer-events-none shadow-[0_0_30px_rgba(255,255,255,0.05)]" />
         </div>
       </body>
     </html>,
