@@ -7,13 +7,5 @@
     "jsxImportSource": "preact"
   },
   "entrypoint": "src/main.tsx",
-  "nodeModulesDir": "auto",
-  "deploy": {
-    "project": "16efe728-4891-4db2-a4ed-c104291bedad",
-    "exclude": [
-      "**/node_modules"
-    ],
-    "include": [],
-    "entrypoint": "src\\main.tsx"
-  }
+  "nodeModulesDir": "auto"
 }
