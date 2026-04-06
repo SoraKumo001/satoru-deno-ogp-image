@@ -9,6 +9,10 @@ Sample OGP Image Creation Using [satoru-render](https://www.npmjs.com/package/sa
 - Deploy test  
   https://xxxx.deno.dev/?title=TITLE&name=NAME&image=IMAGE_URL
 
+## image
+
+![](./document/image.png)
+
 ## deploy
 
 - .env
