@@ -6,7 +6,7 @@
   "scripts": {
     "dev": "deno task dev",
     "update": "deno cache --reload src/main.tsx",
-    "deploy": "npx next-exec -- deployctl deploy --project satoru-deno-ogp --prod",
+    "deploy": "deno deploy --config deno.deploy.json",
     "lint": "eslint src --fix"
   },
   "dependencies": {
