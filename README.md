@@ -38,7 +38,7 @@ The server starts at `http://localhost:8000`.
 ### Request Example
 
 ```
-http://localhost:8000/?title=Hello%20World&name=SoraKumo&image=https://example.com/avatar.jpg
+http://localhost:8000/?title=Hello%20World&name=SoraKumo&image=https://raw.githubusercontent.com/SoraKumo001/cloudflare-ogp/refs/heads/master/sample/image.jpg
 ```
 
 ### Deploy
